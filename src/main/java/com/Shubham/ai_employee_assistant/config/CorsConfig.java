@@ -9,7 +9,8 @@ public class CorsConfig implements WebMvcConfigurer{
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/**")
-		.allowedOrigins("http://localhost:4200","https://ai-employee-assistant-frontend.vercel.app/")
+		.allowedOrigins("http://localhost:4200",
+				"https://ai-employee-assistant-frontend.vercel.app/")
 		.allowedMethods(
 				"GET",
 				"POST",
@@ -17,7 +18,7 @@ public class CorsConfig implements WebMvcConfigurer{
 				"DELETE",
 				"OPTIONS"
 				).allowedHeaders("*")
-				.allowCredentials(false)
+				.allowCredentials(false);
 		
 	}
 	
